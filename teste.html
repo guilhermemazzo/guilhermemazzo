@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exemplo de Lista Aberta por Botão</title>
+<!-- Adicione os estilos do Bootstrap (apenas para este exemplo) -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <div class="mt-3">
+        <button type="button" class="btn btn-primary" onclick="toggleLista()">Abrir Lista</button>
+        <ul id="listaItens" class="list-group mt-3" style="display:none;">
+            <!-- Lista de itens do estoque será adicionada aqui -->
+        </ul>
+    </div>
+</div>
+
+<script>
+    function toggleLista() {
+        var lista = document.getElementById('listaItens');
+        // Verifica se a lista está visível ou oculta e alterna seu estado
+        if (lista.style.display === 'none') {
+            lista.style.display = 'block';
+            // Adicione aqui o código para adicionar itens à lista, se necessário
+        } else {
+            lista.style.display = 'none';
+        }
+    }
+</script>
+
+<!-- Importe o jQuery e os scripts do Bootstrap (necessários para os modais do Bootstrap) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
